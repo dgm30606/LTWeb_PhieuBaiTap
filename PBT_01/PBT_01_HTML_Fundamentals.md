@@ -42,7 +42,35 @@
 </div>
 <div class="footer">© 2026 ShopTLU</div>
 ```
+1. Không sử dụng các thẻ cấu trúc vùng (Landmark Tags) như <header>, <main>, <footer>
 
+Lỗi: Dùng <div class="header">, <div class="main">, và <div class="footer">. Thẻ <div> không mang ý nghĩa gì ngoài việc gom nhóm. Google sẽ không biết đâu là nội dung chính (main content), đâu là phần đầu hay phần chân trang.
+
+Cách sửa: Thay bằng các thẻ <header>, <main>, và <footer>.
+
+2. Thiếu thẻ tiêu đề (Heading Tags: H1, H2, H3...)
+
+Lỗi: Tên thương hiệu ("ShopTLU") và tên sản phẩm ("iPhone 16 Pro") đang được đặt trong thẻ <div>. Các công cụ tìm kiếm phụ thuộc rất nhiều vào các thẻ <h1> đến <h6> để lập chỉ mục (index) và hiểu hệ thống phân cấp nội dung của trang web. Một trang web SEO tốt bắt buộc phải có thẻ <h1> đại diện cho chủ đề chính.
+
+Cách sửa: Dùng <h1> cho Logo/Tiêu đề trang và <h2> cho tên sản phẩm.
+
+3. Không sử dụng thẻ điều hướng <nav> và cấu trúc danh sách cho Menu
+
+Lỗi: Menu đang dùng <div class="menu"> và các thẻ <div> con để chứa liên kết. Googlebot không thể nhận diện đây là cụm điều hướng chính của trang web.
+
+Cách sửa: Sử dụng thẻ <nav> kết hợp với danh sách không thứ tự <ul> và các mục <li> để chuẩn hóa cụm menu điều hướng.
+
+4. Dùng <div> cho một đối tượng nội dung độc lập (Sản phẩm)
+
+Lỗi: <div class="product"> đang chứa thông tin của một sản phẩm.
+
+Cách sửa: Nên sử dụng thẻ <article> vì một sản phẩm là một thành phần nội dung có tính độc lập cao, có thể phân phối và tái sử dụng. Các thành phần bên trong như giá tiền có thể dùng thẻ <p>.
+
+5. Thiếu thuộc tính alt cho hình ảnh (Lỗi SEO hình ảnh nghiêm trọng)
+
+Lỗi: Thẻ <img src="iphone.jpg"> không có thuộc tính alt. Googlebot không có mắt để "nhìn" bức ảnh, nó chỉ đọc văn bản. Không có alt, Google sẽ không biết bức ảnh này nói về cái gì, làm mất đi cơ hội SEO hình ảnh.
+
+Cách sửa: Thêm alt="Điện thoại iPhone 16 Pro". (Có thể bọc thêm bằng thẻ <figure>).
 ### Câu A3 (5đ) — Block vs Inline
 
 Không chạy code, hãy **vẽ tay** (hoặc mô tả bằng text art) kết quả hiển thị của đoạn HTML sau. Giải thích tại sao.
